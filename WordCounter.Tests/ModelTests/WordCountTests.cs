@@ -9,10 +9,19 @@ namespace WordCounter.Tests
     [TestMethod]
     public void SentenceConstructor_CreatesNewInstance_SentenceCheck()
     {
-    string inputSentence = "the quick brown fox jumped over the lazy dog";
-    string inputWord = "dog";
-    SentenceCheck sentenceCheck = new SentenceCheck(inputSentence, inputWord);
-    Assert.AreEqual(typeof(SentenceCheck), sentenceCheck.GetType());
+      string inputSentence = "the quick brown fox jumped over the lazy dog";
+      string inputWord = "dog";
+      SentenceCheck sentenceCheck = new SentenceCheck(inputSentence, inputWord);
+      Assert.AreEqual(typeof(SentenceCheck), sentenceCheck.GetType());
+    }
+    [TestMethod]
+    public void WordContains_ChecksIfInputtedWordIsFoundInSentence_Bool()
+    {
+      string inputSentence = "the quick brown fox jumped over the lazy dog";
+      string inputWord = "dog";
+      SentenceCheck sentenceCheck = new SentenceCheck(inputSentence, inputWord);
+      bool answer = sentenceCheck.WordContains(inputSentence, inputWord);
+      Assert.AreEqual(false, answer);
     }
   }
 }
