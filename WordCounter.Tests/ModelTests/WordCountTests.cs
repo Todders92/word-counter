@@ -21,7 +21,7 @@ namespace WordCounter.Tests
       string inputWord = "dog";
       SentenceCheck sentenceCheck = new SentenceCheck(inputSentence, inputWord);
       bool answer = sentenceCheck.WordContains(inputSentence, inputWord);
-      Assert.AreEqual(false, answer);
+      Assert.AreEqual(true, answer);
     }
   }
 }
