@@ -16,10 +16,23 @@ namespace WordCounter.Models
     {
       return sentence.Split(" ");
     }
-    public bool WordContains(string sentence, string word)
+    public int WordContains(string[] convertedArray, string word)
     {
-      bool answer = sentence.Contains(word);
-      return answer;
+      int score = 0;
+      for (int i=0; i<=convertedArray.Length; i ++)
+      {
+        if (convertedArray[i] == word)
+        {
+          score +=1;
+          return score;
+        }
+        else
+        {
+          score = score;
+          return score;
+        }
+      }
+      return score;
     }
   }
 }

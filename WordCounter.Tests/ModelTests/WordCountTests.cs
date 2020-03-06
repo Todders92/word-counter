@@ -25,15 +25,16 @@ namespace WordCounter.Tests
       string[] convertedArr = {"I", "like", "turtles"};
       CollectionAssert.AreEqual(array, convertedArr);
       }
-    // [TestMethod]
-    // public void WordContains_ChecksIfInputtedWordIsFoundInSentence_Bool()
-    // {
-    //   string inputSentence = "cathedral";
-    //   string inputWord = "cat";
-    //   SentenceCheck sentenceCheck = new SentenceCheck(inputSentence, inputWord);
-    //   bool answer = sentenceCheck.WordContains(inputSentence, inputWord);
-    //   Assert.AreEqual(true, answer);
-    // }
+    [TestMethod]
+    public void WordContains_ChecksIfInputtedWordIsFoundInSentence_Int()
+    {
+      string inputSentence = "the quick brown fox jumped over the lazy dog";
+      string inputWord = "the";
+      SentenceCheck sentenceCheck = new SentenceCheck(inputSentence, inputWord);
+      string[] array = sentenceCheck.TurnToArray(inputSentence);
+      int score = sentenceCheck.WordContains(array, inputWord);
+      Assert.AreEqual(2, score);
+    }
     
   }
 }
