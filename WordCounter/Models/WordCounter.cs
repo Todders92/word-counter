@@ -2,15 +2,15 @@ namespace WordCounter.Models
 {
   public class SentenceCheck
   {
-    public string Sentence { get; set; }
-    public string Word { get; set; }
-    public int Score { get; set; }
+    // public string Sentence { get; set; }
+    // public string Word { get; set; }
+    // public int Score { get; set; }
 
-    public SentenceCheck(string sentence, string word)
+    public SentenceCheck()
     {
-      Sentence = sentence;
-      Word = word;
-      Score = 0;
+      // Sentence = sentence;
+      // Word = word;
+      // Score = 0;
     }
     public string[] TurnToArray(string sentence)
     {
@@ -24,10 +24,6 @@ namespace WordCounter.Models
         if (convertedArray[i] == word)
         {
           score +=1;
-        }
-        else
-        {
-          score = score;
         }
       }
       return score;
