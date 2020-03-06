@@ -12,6 +12,10 @@ namespace WordCounter.Models
       Word = word;
       Score = 0;
     }
+    public string[] TurnToArray(string sentence)
+    {
+      return sentence.Split(" ");
+    }
     public bool WordContains(string sentence, string word)
     {
       bool answer = sentence.Contains(word);

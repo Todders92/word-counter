@@ -16,7 +16,7 @@ _This console application will have the user input a sentence, and then a word. 
 |:---|:---:|:---:|
 |Users inputs a sentence|"the quick brown fox jumped over the lazy dog"|"the quick brown fox jumped over the lazy dog"|
 |user inputs a word after inputting sentence|"dog"|"dog"|
-|new instance of sentence object is created with input sentence, input word and a counter as fields|||
+|new instance of sentence object is created with input sentence, input word and a counter as fields|"the quick brown forx jumped over the lazy dog", "dog"|sentence oobject is instantiated|
 |Application compares word property to sentence property to see if there are any matches|"the quick brown fox jumped over the lazy dog" "dog"|true|
 |if the comparison identifies a matching word it adds 1 to the score property|"the quick brown fox jumped over the lazy dog" "dog"|score +1|
 
