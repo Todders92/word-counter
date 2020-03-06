@@ -4,7 +4,7 @@ namespace WordCounter.Models
   {
     public string Sentence { get; set; }
     public string Word { get; set; }
-    public int Score;
+    public int Score { get; set; }
 
     public SentenceCheck(string sentence, string word)
     {
@@ -19,17 +19,15 @@ namespace WordCounter.Models
     public int WordContains(string[] convertedArray, string word)
     {
       int score = 0;
-      for (int i=0; i<=convertedArray.Length; i ++)
+      for (int i=0; i < convertedArray.Length; i ++)
       {
         if (convertedArray[i] == word)
         {
           score +=1;
-          return score;
         }
         else
         {
           score = score;
-          return score;
         }
       }
       return score;

@@ -26,7 +26,7 @@ namespace WordCounter.Tests
       CollectionAssert.AreEqual(array, convertedArr);
       }
     [TestMethod]
-    public void WordContains_ChecksIfInputtedWordIsFoundInSentence_Int()
+    public void WordContains_ReturnsNumberOfTimesWordIfFoundInSentence_Int()
     {
       string inputSentence = "the quick brown fox jumped over the lazy dog";
       string inputWord = "the";
