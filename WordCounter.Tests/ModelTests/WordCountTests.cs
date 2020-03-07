@@ -25,6 +25,16 @@ namespace WordCounter.Tests
         CollectionAssert.AreEqual(array, convertedArr);
       }
     [TestMethod]
+    public void WordContains_Returns0IfWordIsntInSentence_Int()
+    {
+      string inputSentence = "the quick brown fox jumped over the lazy dog";
+      string inputWord = "nothing";
+      SentenceCheck sentenceCheck = new SentenceCheck();
+      string[] array = sentenceCheck.TurnToArray(inputSentence);
+      int score = sentenceCheck.WordContains(array, inputWord);
+      Assert.AreEqual(0, score);
+    }
+    [TestMethod]
     public void WordContains_Returns1IfWordIsFound_Int()
     {
       string inputSentence = "the quick brown fox jumped over the lazy dog";
